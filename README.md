@@ -40,20 +40,20 @@ Your task is to containerize this existing application using Docker. You need to
 
 - To build the docker image run the command:
 
-```bash
+```docker build -t my-first-docker .
 
 ```
 
 - To run your docker container in port 3000 run the command:
 
-```bash
+```docker run -p 3000:3000 my-first-docker
 
 ```
 
 ## Reflection Question
 **Answer the following question in the space below**: How does containerization with Docker differ from using virtual machines, and why might a development team choose Docker containers over VMs for deploying applications like the one you just containerized?
 
-
+    Virtual machines create virtual computers for each application to isolate applications. The virtual machines had their own operating system which succesffuly isolated, but had a downside of extreme memory consumption, long start up time, and substantial overhead was required. Docker, on the other hand, package applications with the bare minimum they need to run in containers while sharing the host operating system. They are faster, don't take up as much memory, and use minimal resources without the overhead of using different operating systems. Docker containers are more appealing to development teams because they are lightweight, fast, implement process-level isolation, portable, and allows for better overal team collaboration.
 
 ## Application Requirements for Docker
 
